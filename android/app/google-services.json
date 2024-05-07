@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1082601564353",
+    "project_id": "chatapptest-b56a4",
+    "storage_bucket": "chatapptest-b56a4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1082601564353:android:95436300ace494cb09cc40",
+        "android_client_info": {
+          "package_name": "com.example.dartpractice"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDuaSqLYUdUJO2v717wIJIzW8K16t1LswU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

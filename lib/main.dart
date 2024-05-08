@@ -32,7 +32,9 @@ class _MyAppState extends State<MyApp> {
   getUserLoggedInStatus() async {
     await HelperFunctions.getUserLoggedInStatus().then((value) {
       if (value != null) {
-        _isSignedIn = value;
+        setState(() {
+          _isSignedIn = value;
+        });
       }
     });
   }
@@ -43,7 +45,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       theme: ThemeData(
         primaryColor: const Color.fromARGB(255, 101, 88, 221),
-        scaffoldBackgroundColor: Color.fromARGB(255, 255, 255, 255),
+        scaffoldBackgroundColor: const Color.fromARGB(255, 255, 255, 255),
       ),
       debugShowCheckedModeBanner: false,
       home: _isSignedIn ? const HomePage() : const LoginPage(),

@@ -1,5 +1,6 @@
 import "package:dartpractice/helper/helper_function.dart";
 import "package:dartpractice/pages/auth/login_page.dart";
+import "package:dartpractice/pages/home_page.dart";
 import "package:dartpractice/service/auth_service.dart";
 import 'package:flutter/material.dart';
 import "package:flutter/gestures.dart";

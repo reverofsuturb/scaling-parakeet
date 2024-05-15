@@ -34,35 +34,35 @@ class _ChatPageState extends State<ChatPage> {
       setState(() {
         chats = val;
       });
-      DatabaseService().getGroupAdmin(widget.groupId).then((val) {
-        setState(() {
-          admin = val;
-        });
+    });
+    DatabaseService().getGroupAdmin(widget.groupId).then((val) {
+      setState(() {
+        admin = val;
       });
     });
+  }
 
-    @override
-    Widget build(BuildContext context) {
-      return Scaffold(
-          appBar: AppBar(
-        centerTitle: true,
-        elevation: 0,
-        title: Text(widget.groupName),
-        backgroundColor: const Color.fromARGB(255, 101, 88, 221),
-        actions: [
-          IconButton(
-              onPressed: () {
-                nextScreen(
-                    context,
-                    GroupInfo(
-                      groupId: widget.groupId,
-                      groupName: widget.groupName,
-                      adminName: admin,
-                    ));
-              },
-              icon: const Icon(Icons.info))
-        ],
-      ));
-    }
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+      centerTitle: true,
+      elevation: 0,
+      title: Text(widget.groupName),
+      backgroundColor: const Color.fromARGB(255, 101, 88, 221),
+      actions: [
+        IconButton(
+            onPressed: () {
+              nextScreen(
+                  context,
+                  GroupInfo(
+                    groupId: widget.groupId,
+                    groupName: widget.groupName,
+                    adminName: admin,
+                  ));
+            },
+            icon: const Icon(Icons.info))
+      ],
+    ));
   }
 }
